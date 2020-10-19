@@ -21,4 +21,11 @@ public class SubjectServiceImpl implements SubjectService {
     public List<Subject> findAll() {
         return subjectMapper.selectByExample(null);
     }
+
+    @Override
+    public Subject findBySubjectId(Integer subjectId) {
+        return subjectMapper.findBySubjectId(subjectId);
+    }
+
+
 }

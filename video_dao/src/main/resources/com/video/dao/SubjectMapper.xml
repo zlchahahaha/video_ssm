@@ -5,6 +5,40 @@
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="subject_name" property="subjectName" jdbcType="VARCHAR" />
   </resultMap>
+
+  <resultMap id="subjectMap" type="com.video.pojo.Subject" >
+    <id column="subid" property="id" jdbcType="INTEGER" />
+    <result column="subject_name" property="subjectName" jdbcType="VARCHAR" />
+    <collection property="courseList" ofType="com.video.pojo.Course">
+      <id column="couid" property="id"/>
+      <result column="course_title" property="courseTitle"/>
+      <result column="course_desc" property="courseDesc"/>
+        <collection property="videoList" ofType="com.video.pojo.Video">
+            <id column="vidid" property="id"/>
+            <result column="title" property="title"/>
+            <result column="detail" property="detail"/>
+            <result column="time" property="time"/>
+            <result column="video_url" property="videoUrl"/>
+            <result column="image_url" property="imageUrl"/>
+            <result column="play_num" property="playNum"/>
+        </collection>
+    </collection>
+
+  </resultMap>
+
+
+
+  <select id="findBySubjectId" resultMap="subjectMap">
+      select `subject`.id subid, subject_name,
+                course_title, course_desc, course.id couid,
+                video.id vidid, title, detail, time, video_url, image_url, play_num
+      from course,`subject`,video
+      where course.subject_id=`subject`.id
+      and video.course_id=course.id
+      and `subject`.id=#{subId}
+  </select>
+
+
   <sql id="Example_Where_Clause" >
     <where >
       <foreach collection="oredCriteria" item="criteria" separator="or" >
@@ -81,7 +115,7 @@
     </if>
   </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
+    select
     <include refid="Base_Column_List" />
     from subject
     where id = #{id,jdbcType=INTEGER}
