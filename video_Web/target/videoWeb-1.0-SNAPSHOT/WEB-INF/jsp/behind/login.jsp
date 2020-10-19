@@ -28,9 +28,9 @@
                         //alert("登录成功");
                         location.href = "${pageContext.request.contextPath}/video/list";
                     } else {
-                        //alert("用户民密码错误");
-                        $("#msg").text("用户名密码错误，请检查后输入");
-                    }
+                //alert("用户民密码错误");
+                $("#msg").text("用户名密码错误，请检查后输入");
+            }
                 }
             );
 
