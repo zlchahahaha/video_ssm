@@ -1,7 +1,1 @@
-*.class
-*.apk
-bin/
-gen/
-.settings/
-proguard/
 .idea/workspace.xml
