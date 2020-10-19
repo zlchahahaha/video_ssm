@@ -298,7 +298,7 @@
             </tr>
             </thead>
             <tbody>
-            <c:forEach items="${page.rows}" var="video" varStatus="status">
+            <c:forEach items="${pageInfo.list}" var="video" varStatus="status">
                 <tr>
                     <td><input type="checkbox" name="ids" value="${video.id}"
                                onclick="selectOne(this)"/></td>
@@ -324,12 +324,22 @@
 
 
     </form>
-</div>
-<div class="container">
-    <div class="navbar-right" style="padding-right: 17px">
-        <p:page url="${pageContext.request.contextPath}/video/list"></p:page>
+    <br>
+    <div align="center">
+        <a href="adminFindAll?page=1">首页</a>
+        <a href="adminFindAll?page=${pageInfo.prePage}">上一页</a>
+        &nbsp;
+        ${pageInfo.pageNum }/${pageInfo.pages} </span>页
+        &nbsp;
+        <a href="adminFindAll?page=${pageInfo.nextPage }">下一页</a>
+        <a href="adminFindAll?page=${pageInfo.pages }">尾页</a>
     </div>
 </div>
+<%--<div class="container">--%>
+<%--    <div class="navbar-right" style="padding-right: 17px">--%>
+<%--        <p:page url="${pageContext.request.contextPath}/video/list"></p:page>--%>
+<%--    </div>--%>
+<%--</div>--%>
 
 
 </body>

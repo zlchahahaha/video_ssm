@@ -6,7 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.List;
 
 /**
  * @author lyuf
@@ -15,24 +18,26 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("admin")
 @Controller
 public class AdminController {
+
     @Autowired
     private AdminService adminService;
 
-    @RequestMapping("login")
-    public ModelAndView login(Admin admin,@RequestParam(defaultValue = "fail",required = false) String data) {
-        ModelAndView modelAndView = new ModelAndView();
-        Admin userByNameAndPsw = adminService.findUserByNameAndPsw(admin.getUsername(), admin.getUsername());
 
-        if (userByNameAndPsw != null) {
-            data = "success";
-            modelAndView.addObject("data", data);
-            modelAndView.setViewName("/WEB-INF/jsp/login.jsp");
-            return modelAndView;
-        } else {
-            modelAndView.addObject("data", data);
-            modelAndView.setViewName("/WEB-INF/jsp/login.jsp");
-            return modelAndView;
-        }
+    @RequestMapping("toLoginView")
+    public String toLoginView() {
+
+        return "/behind/login.jsp";
     }
 
+    @RequestMapping("login")
+    @ResponseBody
+    public String login(Admin admin) {
+
+        System.out.println("执行登录");
+
+        List<Admin> userByNameAndPsw = adminService.findUserByNameAndPsw(admin.getUsername(), admin.getUsername());
+
+        return userByNameAndPsw.isEmpty() ? "fail" : "success";
+
+    }
 }

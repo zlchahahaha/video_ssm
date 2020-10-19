@@ -19,6 +19,26 @@ public class Video {
 
     private String detail;
 
+    private Course course;
+
+    private Speaker speaker;
+
+    public Speaker getSpeaker() {
+        return speaker;
+    }
+
+    public void setSpeaker(Speaker speaker) {
+        this.speaker = speaker;
+    }
+
+    public Course getCourse() {
+        return course;
+    }
+
+    public void setCourse(Course course) {
+        this.course = course;
+    }
+
     public Integer getId() {
         return id;
     }
@@ -89,5 +109,22 @@ public class Video {
 
     public void setDetail(String detail) {
         this.detail = detail == null ? null : detail.trim();
+    }
+
+    @Override
+    public String toString() {
+        return "Video{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", time=" + time +
+                ", speakerId=" + speakerId +
+                ", courseId=" + courseId +
+                ", videoUrl='" + videoUrl + '\'' +
+                ", imageUrl='" + imageUrl + '\'' +
+                ", playNum=" + playNum +
+                ", detail='" + detail + '\'' +
+                ", course=" + course +
+                ", speaker=" + speaker +
+                '}';
     }
 }
