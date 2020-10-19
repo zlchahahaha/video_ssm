@@ -6,10 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="video_Web" />
         <module name="video_dao" />
-        <module name="videoWeb" />
-        <module name="video_service" />
         <module name="video_utils" />
+        <module name="video_service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
