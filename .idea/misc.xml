@@ -3,7 +3,7 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/video-web" />
-    <file type="web" url="file://$PROJECT_DIR$/videoWeb" />
+    <file type="web" url="file://$PROJECT_DIR$/video_Web" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -16,6 +16,7 @@
         <option value="$PROJECT_DIR$/commons/pom.xml" />
         <option value="$PROJECT_DIR$/dao/pom.xml" />
         <option value="$PROJECT_DIR$/video-web/pom.xml" />
+        <option value="$PROJECT_DIR$/video_utils/pom.xml" />
       </set>
     </option>
   </component>
