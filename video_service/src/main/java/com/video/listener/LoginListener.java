@@ -1,20 +1,30 @@
 package com.video.listener;
 
-import javax.servlet.http.HttpSessionEvent;
-import javax.servlet.http.HttpSessionListener;
+import org.springframework.web.servlet.HandlerInterceptor;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 
 /**
  * @author: Administrator
  * @date: 2020/10/19 16:27
  */
-public class LoginListener implements HttpSessionListener {
+public class LoginListener implements HandlerInterceptor {
+
     @Override
-    public void sessionCreated(HttpSessionEvent se) {
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        return false;
+    }
+
+    @Override
+    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
 
     }
 
     @Override
-    public void sessionDestroyed(HttpSessionEvent se) {
+    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
 
     }
 }

@@ -11,18 +11,26 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-        <!-- 扫描对应的包 -->
-        <context:component-scan base-package="com.video"></context:component-scan>
+    <!-- 扫描对应的包 -->
+    <context:component-scan base-package="com.video"></context:component-scan>
 
-        <!-- 开启springmvc注解 -->
-        <mvc:annotation-driven />
+    <!-- 开启springmvc注解 -->
+    <mvc:annotation-driven/>
+    <!--        拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <mvc:exclude-mapping path="/user/login"></mvc:exclude-mapping>
+            <bean class="com.video.listener.LoginListener"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
 
-        <!-- 不拦截静态资源 -->
-        <mvc:default-servlet-handler></mvc:default-servlet-handler>
+    <!-- 不拦截静态资源 -->
+    <mvc:default-servlet-handler></mvc:default-servlet-handler>
 
-        <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-                <property name="prefix" value="/WEB-INF/jsp"></property>
-                <property name="suffix" value=""></property>
-        </bean>
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp"></property>
+        <property name="suffix" value=""></property>
+    </bean>
 
 </beans>
