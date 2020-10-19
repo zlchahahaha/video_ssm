@@ -6,14 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="video_Web" />
         <module name="video_dao" />
-        <module name="video_utils" />
+        <module name="videoWeb" />
         <module name="video_service" />
+        <module name="video_utils" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="video_utils" target="1.5" />
+      <module name="adminDao" target="1.8" />
       <module name="videoweb" target="1.7" />
     </bytecodeTargetLevel>
   </component>

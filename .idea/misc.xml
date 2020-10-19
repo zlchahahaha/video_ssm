@@ -4,6 +4,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/video-web" />
     <file type="web" url="file://$PROJECT_DIR$/video_Web" />
+    <file type="web" url="file://$PROJECT_DIR$/videoWeb" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -13,10 +14,11 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/adminDao/pom.xml" />
         <option value="$PROJECT_DIR$/commons/pom.xml" />
         <option value="$PROJECT_DIR$/dao/pom.xml" />
         <option value="$PROJECT_DIR$/video-web/pom.xml" />
-        <option value="$PROJECT_DIR$/video_utils/pom.xml" />
+        <option value="$PROJECT_DIR$/videoWeb/pom.xml" />
       </set>
     </option>
   </component>
