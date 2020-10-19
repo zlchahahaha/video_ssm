@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6de6c3be-4a1b-4c51-8b97-ac5aa2485eff" name="Default Changelist" comment="create admin">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adminDao/adminDao.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/404.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/before/change_avatar.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/before/change_profile.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/before/course.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/before/forget_password.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/before/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/before/my_profile.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/before/password_safe.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/before/reset_password.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/before/section.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/behind/addSpeaker.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/behind/addVideo.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/behind/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/behind/speakerList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/behind/videoList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/tld/commons.tld" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/images/error.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/android.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/avatar_lg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/banner-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/banner-10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/banner-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/banner-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/banner-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/banner-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/bigdata.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/count.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/error.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/footer1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/footer2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/footer3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/footer4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/footer_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/hl_scroll_left1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/html5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/java.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/left-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/nav_down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/nav_down2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/password.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/phone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/php.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/player.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/profile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/python.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/q.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/qidai.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/right-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/sc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/teacher-wjh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/tele.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/thumb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/ui.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/we.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/yzm.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/微信公众号.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/微博公众号.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/adminDao/target/" />
+    <ignored path="$PROJECT_DIR$/video-web/target/" />
+    <ignored path="$PROJECT_DIR$/videoWeb/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/videoWeb/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="257">
+              <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/adminDao/src/main/java/com/video/pojo/admin.java" />
+        <option value="$PROJECT_DIR$/video-web/pom.xml" />
+        <option value="$PROJECT_DIR$/videoWeb/src/webapp/js/._axios.js" />
+        <option value="$PROJECT_DIR$/videoWeb/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="787" />
+    <option name="y" value="100" />
+    <option name="width" value="784" />
+    <option name="height" value="812" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="video" type="b2602c69:ProjectViewProjectNode" />
+              <item name="video" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="video" type="b2602c69:ProjectViewProjectNode" />
+              <item name="video" type="462c0819:PsiDirectoryNode" />
+              <item name="videoWeb" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/commons/src/main/java" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\code\workSapce\video\video\commons\src\main\java" />
+      <recent name="E:\code\workSapce\video\video\videoWeb\src" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6de6c3be-4a1b-4c51-8b97-ac5aa2485eff" name="Default Changelist" comment="" />
+      <created>1603078684038</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603078684038</updated>
+      <workItem from="1603078686671" duration="3535000" />
+    </task>
+    <task id="LOCAL-00001" summary="create dao">
+      <created>1603078921074</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603078921074</updated>
+    </task>
+    <task id="LOCAL-00002" summary="delete dao">
+      <created>1603079012357</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603079012357</updated>
+    </task>
+    <task id="LOCAL-00003" summary="delete adminDao">
+      <created>1603082408585</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603082408585</updated>
+    </task>
+    <task id="LOCAL-00004" summary="create admin">
+      <created>1603082521697</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603082521697</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3535000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info id="Designer" />
+      <window_info id="Image Layers" />
+      <window_info id="Capture Tool" />
+      <window_info id="UI Designer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Web" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17761394" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" weight="0.3286119" />
+      <window_info anchor="bottom" id="Messages" weight="0.3286119" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="create dao" />
+    <MESSAGE value="delete dao" />
+    <MESSAGE value="delete adminDao" />
+    <MESSAGE value="create admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="create admin" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/dao/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adminDao/src/main/java/com/video/pojo/admin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/video-web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adminDao/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/js/._Jcrop_upload.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/js/._jquery-1.8.3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="36" lean-forward="true" selection-start-column="36" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/js/._jquery.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/js/._jquery.cityselect.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/js/._profile.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/js/._index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/js/._axios.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="78" lean-forward="true" selection-start-column="78" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/js/skin/default/layer.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/js/skin/default/loading-1.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/js/skin/default/._loading-1.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/js/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/js/Jcrop_upload.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/js/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/js/gVerify.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/js/confirm.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/js/axios.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/js/._vueCourse.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/js/._vueSection.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/css/._base.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/css/._css.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/css/._forget_password.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/css/bootstrap-theme.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/css/base.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/css/._video-js.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/fonts/glyphicons-halflings-regular.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/fonts/glyphicons-halflings-regular.ttf">
+      <provider selected="true" editor-type-id="fontseditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/404.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-114" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/before/change_avatar.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/before/change_profile.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/before/course.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/before/forget_password.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/before/index.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/before/reset_password.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/before/section.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/error.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/src/main/java/video-utils/src/main/java/com/qf/videos/utils/Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/before/password_safe.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWeb/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>video</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
