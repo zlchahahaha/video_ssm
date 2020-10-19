@@ -4,7 +4,9 @@ import com.video.pojo.Video;
 import com.video.pojo.VideoExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface VideoMapper {
     int countByExample(VideoExample example);
 

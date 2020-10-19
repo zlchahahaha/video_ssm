@@ -4,7 +4,9 @@ import com.video.pojo.Speaker;
 import com.video.pojo.SpeakerExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface SpeakerMapper {
     int countByExample(SpeakerExample example);
 

@@ -4,7 +4,9 @@ import com.video.pojo.Subject;
 import com.video.pojo.SubjectExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface SubjectMapper {
     int countByExample(SubjectExample example);
 
