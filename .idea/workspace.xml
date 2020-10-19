@@ -1,89 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6de6c3be-4a1b-4c51-8b97-ac5aa2485eff" name="Default Changelist" comment="create admin">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminDao/adminDao.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/404.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/before/change_avatar.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/before/change_profile.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/before/course.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/before/forget_password.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/before/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/before/my_profile.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/before/password_safe.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/before/reset_password.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/before/section.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/behind/addSpeaker.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/behind/addVideo.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/behind/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/behind/speakerList.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/behind/videoList.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/jsp/error.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/tld/commons.tld" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/images/error.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/android.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/avatar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/avatar_lg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/banner-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/banner-10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/banner-11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/banner-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/banner-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/banner-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/bigdata.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/count.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/error.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/footer1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/footer2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/footer3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/footer4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/footer_logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/hl_scroll_left1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/html5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/java.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/left-arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/nav_down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/nav_down2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/password.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/phone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/php.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/player.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/profile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/python.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/q.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/qidai.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/right-arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/sc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/search.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/teacher-wjh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/tele.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/thumb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/ui.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/up.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/user.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/we.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/yzm.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/微信公众号.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/img/微博公众号.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/videoWeb/src/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="6de6c3be-4a1b-4c51-8b97-ac5aa2485eff" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminDao/adminDao.iml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -106,7 +26,7 @@
         <entry file="file://$PROJECT_DIR$/videoWeb/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="257">
-              <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+              <caret line="88" selection-start-line="88" selection-end-line="88" />
             </state>
           </provider>
         </entry>
@@ -133,6 +53,35 @@
         <option value="$PROJECT_DIR$/videoWeb/pom.xml" />
       </list>
     </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="E:/soft/maven/apache-maven-3.5.2" />
+        <option name="userSettingsFile" value="E:\soft\maven\apache-maven-3.5.2\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="video" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="video" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="787" />
@@ -182,7 +131,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -212,7 +161,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603078684038</updated>
-      <workItem from="1603078686671" duration="3535000" />
+      <workItem from="1603078686671" duration="3853000" />
     </task>
     <task id="LOCAL-00001" summary="create dao">
       <created>1603078921074</created>
@@ -242,11 +191,18 @@
       <option name="project" value="LOCAL" />
       <updated>1603082521697</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="create web">
+      <created>1603087334614</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1603087334614</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3535000" />
+    <option name="totallyTimeSpent" value="3853000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -257,7 +213,7 @@
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Web" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17761394" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17761394" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
@@ -273,7 +229,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Maven" />
+      <window_info active="true" anchor="right" id="Maven" visible="true" weight="0.3297587" />
       <window_info anchor="right" id="Palette" />
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="right" id="Database" />
@@ -292,7 +248,8 @@
     <MESSAGE value="delete dao" />
     <MESSAGE value="delete adminDao" />
     <MESSAGE value="create admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="create admin" />
+    <MESSAGE value="create web" />
+    <option name="LAST_COMMIT_MESSAGE" value="create web" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/dao/pom.xml">
@@ -480,7 +437,7 @@
     <entry file="file://$PROJECT_DIR$/videoWeb/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
-          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
         </state>
       </provider>
     </entry>
