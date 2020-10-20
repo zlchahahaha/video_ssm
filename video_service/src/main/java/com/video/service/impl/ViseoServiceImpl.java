@@ -43,4 +43,9 @@ public class ViseoServiceImpl implements VideoService {
     public void addVideo(Video video) {
         videoMapper.insert(video);
     }
+
+    @Override
+    public Video findVideoById(Integer videoId) {
+        return videoMapper.findVideoById(videoId);
+    }
 }

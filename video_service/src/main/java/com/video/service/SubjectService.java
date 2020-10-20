@@ -12,4 +12,6 @@ public interface SubjectService {
     public List<Subject> findAll();
 
     Subject findBySubjectId(Integer subjectId);
+
+    Subject findBySubjectName(String subjectName);
 }

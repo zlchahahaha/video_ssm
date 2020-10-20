@@ -50,6 +50,7 @@
             <a href="javascript:;" id="loginout">退出</a>
             <a href="user/showMyProfile" id="account">${sessionScope.userAccount}</a>
         </div>
+
         <a href="${pageContext.request.contextPath}/admin/toLoginView"><img src="${pageContext.request.contextPath}/img/we.png">管理员登录</a>
         <a onclick="pyRegisterCvt()" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2580094677&site=qq&menu=yes"><img
                 src="${pageContext.request.contextPath}/img/we.png" draggable="false">联系我们</a>

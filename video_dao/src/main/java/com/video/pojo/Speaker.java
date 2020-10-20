@@ -1,8 +1,5 @@
 package com.video.pojo;
 
-import lombok.Data;
-
-
 public class Speaker {
     private Integer id;
 
@@ -49,6 +46,7 @@ public class Speaker {
     public String getSpeakerDesc() {
         return speakerDesc;
     }
+
     public void setSpeakerDesc(String speakerDesc) {
         this.speakerDesc = speakerDesc == null ? null : speakerDesc.trim();
     }

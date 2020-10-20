@@ -8,6 +8,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CourseMapper {
+    Course findById(Integer courseId);
+
     int countByExample(CourseExample example);
 
     int deleteByExample(CourseExample example);

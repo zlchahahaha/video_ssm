@@ -124,4 +124,24 @@ public class VideoController {
         return "redirect:/video/list";
     }
 
+    @RequestMapping("showVideo")
+    public ModelAndView showVideo(Integer videoId, String subjectName) {
+        ModelAndView modelAndView = new ModelAndView();
+
+        Video video = videoService.findVideoById(videoId);
+        Course course = video.getCourse();
+        Integer courseId = course.getId();
+        course = courseService.findById(courseId);
+
+        System.out.println(course);
+        System.out.println(video);
+
+        modelAndView.addObject("video", video);
+        modelAndView.addObject("course", course);
+        modelAndView.addObject("subjectName", subjectName);
+        modelAndView.setViewName("/before/section.jsp");
+
+        return modelAndView;
+    }
+
 }
