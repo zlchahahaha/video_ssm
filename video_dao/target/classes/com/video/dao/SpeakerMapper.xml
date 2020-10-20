@@ -8,7 +8,7 @@
     <result column="head_img_url" property="headImgUrl" jdbcType="VARCHAR" />
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.video.pojo.Speaker" extends="BaseResultMap" >
-    <result column="speaker_desc" property="speakerDesc" jdbcType="VARCHAR" />
+    <result column="speaker_desc" property="speakerDesc" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -200,7 +200,7 @@
       speaker_name = #{record.speakerName,jdbcType=VARCHAR},
       speaker_job = #{record.speakerJob,jdbcType=VARCHAR},
       head_img_url = #{record.headImgUrl,jdbcType=VARCHAR},
-      speaker_desc = #{record.speakerDesc,jdbcType=VARCHAR}
+      speaker_desc = #{record.speakerDesc,jdbcType=LONGVARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -238,7 +238,7 @@
     set speaker_name = #{speakerName,jdbcType=VARCHAR},
       speaker_job = #{speakerJob,jdbcType=VARCHAR},
       head_img_url = #{headImgUrl,jdbcType=VARCHAR},
-      speaker_desc = #{speakerDesc,jdbcType=VARCHAR}
+      speaker_desc = #{speakerDesc,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.video.pojo.Speaker" >
