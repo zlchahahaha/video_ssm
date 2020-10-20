@@ -9,9 +9,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -34,29 +31,13 @@ public class AdminController {
 
     @RequestMapping("login")
     @ResponseBody
-    public String login(Admin admin, HttpServletRequest request) {
+    public String login(Admin admin) {
 
         System.out.println("执行登录");
 
         List<Admin> userByNameAndPsw = adminService.findUserByNameAndPsw(admin.getUsername(), admin.getUsername());
 
-        if (!(userByNameAndPsw.isEmpty())) {
-            System.out.println(userByNameAndPsw);
-            HttpSession session = request.getSession(true);
-            session.setAttribute("username", admin.getUsername());
-            session.setMaxInactiveInterval(60 * 60);
-            return  "success";
-        }else {
-            return "fail";
-        }
-    }
+        return userByNameAndPsw.isEmpty() ? "fail" : "success";
 
-    @RequestMapping("exit")
-    public String exit(HttpServletRequest request) {
-        HttpSession session = request.getSession(false);
-//        销毁Session
-        session.invalidate();
-
-        return "/behind/login.jsp";
     }
 }

@@ -19,26 +19,6 @@ public class SperkerServiceImpl implements SpeakerService {
 
     @Override
     public List<Speaker> findAll() {
-        return speakerMapper.selectByExampleWithBLOBs(null);
-    }
-
-    @Override
-    public Speaker findById(Integer id) {
-        return speakerMapper.selectByPrimaryKey(id);
-    }
-
-    @Override
-    public void addSpeaker(Speaker speaker) {
-        speakerMapper.insert(speaker);
-    }
-
-    @Override
-    public void updateSpaker(Speaker speaker) {
-        speakerMapper.updateByPrimaryKeyWithBLOBs(speaker);
-    }
-
-    @Override
-    public void speakerDel(Integer id) {
-        speakerMapper.deleteByPrimaryKey(id);
+        return speakerMapper.selectByExample(null);
     }
 }

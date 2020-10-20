@@ -110,8 +110,8 @@
 
             </ul>
             <p class="navbar-text navbar-right">
-                <span>${username}</span> <i class="glyphicon glyphicon-log-in"
-                                            aria-hidden="true"></i>&nbsp;&nbsp;<a
+                <span>${sessionScope.userName}</span> <i class="glyphicon glyphicon-log-in"
+                                                         aria-hidden="true"></i>&nbsp;&nbsp;<a
                     href="${pageContext.request.contextPath}/admin/exit"
                     class="navbar-link">退出</a>
             </p>
@@ -205,8 +205,7 @@
                         <input type="hidden" class="form-control" id="courseId" name="courseId" value="0">
                     </c:if>
                     <c:if test="${not empty video.courseId}">
-                        <input type="hidden" class="form-control" id="courseId" name="courseId"
-                               value="${video.courseId}">
+                        <input type="hidden" class="form-control" id="courseId" name="courseId" value="${video.courseId}">
                     </c:if>
                     <input type="text" class="form-control" disabled id="courseName" aria-label="...">
                 </div><!-- /input-group -->
@@ -241,18 +240,12 @@
         </div>
 
         <div class="form-group">
-            <label class="col-sm-2 control-label">播放次数</label>
-            <div class="col-sm-10">
-                <input type="text" name="playNum" class="form-control" readonly="readonly" value="${video.playNum}" >
-            </div>
-        </div>
-
-        <div class="form-group">
             <label class="col-sm-2 control-label">备注</label>
             <div class="col-sm-10">
                 <textarea class="form-control" name="detail" rows="3">${video.detail}</textarea>
             </div>
         </div>
+
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
                 <button type="submit" class="btn btn-default">保存</button>
