@@ -35,7 +35,7 @@ public class VideoController {
     private CourseService courseService;
 
     @RequestMapping("list")
-    public ModelAndView list(QueryVo queryVo, @RequestParam(value = "page", defaultValue = "1") Integer pageNum){
+    public ModelAndView list(@RequestParam(required = false) QueryVo queryVo, @RequestParam(value = "page", defaultValue = "1") Integer pageNum){
         PageHelper.startPage(pageNum, 10);
         List<Video> allVideo = videoService.findAllVideo(queryVo);
         PageInfo<Video> pageInfo = new PageInfo<>(allVideo);

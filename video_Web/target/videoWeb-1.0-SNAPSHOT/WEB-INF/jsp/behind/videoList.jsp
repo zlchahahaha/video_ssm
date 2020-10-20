@@ -326,13 +326,13 @@
     </form>
     <br>
     <div align="center">
-        <a href="adminFindAll?page=1">首页</a>
-        <a href="adminFindAll?page=${pageInfo.prePage}">上一页</a>
+        <a href="list?page=1">首页</a>
+        <a href="list?page=${pageInfo.prePage}">上一页</a>
         &nbsp;
         ${pageInfo.pageNum }/${pageInfo.pages} </span>页
         &nbsp;
-        <a href="adminFindAll?page=${pageInfo.nextPage }">下一页</a>
-        <a href="adminFindAll?page=${pageInfo.pages }">尾页</a>
+        <a href="list?page=${pageInfo.nextPage }">下一页</a>
+        <a href="list?page=${pageInfo.pages }">尾页</a>
     </div>
 </div>
 <%--<div class="container">--%>

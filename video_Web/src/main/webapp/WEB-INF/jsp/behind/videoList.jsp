@@ -335,12 +335,6 @@
         <a href="list?page=${pageInfo.pages }">尾页</a>
     </div>
 </div>
-<%--<div class="container">--%>
-<%--    <div class="navbar-right" style="padding-right: 17px">--%>
-<%--        <p:page url="${pageContext.request.contextPath}/video/list"></p:page>--%>
-<%--    </div>--%>
-<%--</div>--%>
-
 
 </body>
 </html>
