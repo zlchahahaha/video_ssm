@@ -22,6 +22,43 @@
         </association>
 
     </resultMap>
+
+    <resultMap id="findVideoByIdMap" type="com.video.pojo.Video">
+        <id column="vidid" property="id" jdbcType="INTEGER"/>
+        <result column="title" property="title" jdbcType="VARCHAR"/>
+        <result column="time" property="time" jdbcType="INTEGER"/>
+        <result column="speaker_id" property="speakerId" jdbcType="INTEGER"/>
+        <result column="course_id" property="courseId" jdbcType="INTEGER"/>
+        <result column="video_url" property="videoUrl" jdbcType="VARCHAR"/>
+        <result column="image_url" property="imageUrl" jdbcType="VARCHAR"/>
+        <result column="play_num" property="playNum" jdbcType="INTEGER"/>
+        <result column="detail" property="detail"/>
+        <association property="course" javaType="com.video.pojo.Course">
+            <id column="cusid" property="id" jdbcType="INTEGER"/>
+            <result column="course_title" property="courseTitle" jdbcType="VARCHAR"/>
+            <result column="course_desc" property="courseDesc" jdbcType="VARCHAR"/>
+            <result column="subject_id" property="subjectId" />
+        </association>
+        <association property="speaker" javaType="com.video.pojo.Speaker">
+            <id column="spkid" property="id" jdbcType="INTEGER"/>
+            <result column="speaker_name" property="speakerName" jdbcType="VARCHAR"/>
+            <result column="speaker_job" property="speakerJob" jdbcType="VARCHAR"/>
+            <result column="head_img_url" property="headImgUrl" jdbcType="VARCHAR"/>
+            <result column="speaker_desc" property="speakerDesc" jdbcType="VARCHAR"/>
+        </association>
+    </resultMap>
+
+    <select id="findVideoById" resultMap="findVideoByIdMap">
+        select video.id vidid,title,time,speaker_id,course_id,video_url,image_url,play_num,detail,
+        course.id cusid,course_title,course_desc,subject_id,
+        speaker.id spkid,speaker_name,speaker_job,head_img_url,speaker_desc
+        from video,course,speaker
+        where video.course_id=course.id
+        and video.speaker_id=speaker.id
+        and video.id=#{video}
+    </select>
+
+
     <resultMap id="ResultMapWithBLOBs" type="com.video.pojo.Video" extends="BaseResultMap">
         <result column="detail" property="detail" jdbcType="VARCHAR"/>
     </resultMap>
