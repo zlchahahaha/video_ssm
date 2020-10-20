@@ -7,6 +7,8 @@ import com.video.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author lyuf
  * @date 2020/10/19 15:25
@@ -18,12 +20,12 @@ public class AdminServiceImpl implements AdminService {
     private AdminMapper adminMapper;
 
     @Override
-    public Admin findUserByNameAndPsw(String username, String password) {
+    public List<Admin> findUserByNameAndPsw(String username, String password) {
 
         AdminExample adminExample = new AdminExample();
         adminExample.createCriteria().andUsernameEqualTo(username);
         adminExample.createCriteria().andPasswordEqualTo(password);
 
-        return (Admin) adminMapper.selectByExample(adminExample);
+        return adminMapper.selectByExample(adminExample);
     }
 }
