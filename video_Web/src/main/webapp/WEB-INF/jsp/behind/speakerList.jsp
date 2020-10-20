@@ -74,7 +74,7 @@
 
             </ul>
             <p class="navbar-text navbar-right">
-                <span>${sessionScope.userName}</span> <i class="glyphicon glyphicon-log-in"
+                <span>${username}</span> <i class="glyphicon glyphicon-log-in"
                                                          aria-hidden="true"></i>&nbsp;&nbsp;<a
                     href="${pageContext.request.contextPath}/admin/exit"
                     class="navbar-link">退出</a>
@@ -119,7 +119,7 @@
         </tr>
         </thead>
         <tbody>
-        <c:forEach items="${page.rows}" var="speaker" varStatus="status">
+        <c:forEach items="${pageInfo.list}" var="speaker" varStatus="status">
             <tr>
                 <td>${status.index+1}</td>
                 <td>${speaker.speakerName}</td>
@@ -137,10 +137,14 @@
 
         </tbody>
     </table>
-</div>
-<div class="container">
-    <div class="navbar-right" style="padding-right: 17px">
-        <p:page url="${pageContext.request.contextPath}/speaker/showSpeakerList"></p:page>
+    <div align="center">
+        <a href="showSpeakerList?page=1">首页</a>
+        <a href="showSpeakerList?page=${pageInfo.prePage}">上一页</a>
+        &nbsp;
+        ${pageInfo.pageNum }/${pageInfo.pages} </span>页
+        &nbsp;
+        <a href="showSpeakerList?page=${pageInfo.nextPage }">下一页</a>
+        <a href="showSpeakerList?page=${pageInfo.pages }">尾页</a>
     </div>
 </div>
 </body>

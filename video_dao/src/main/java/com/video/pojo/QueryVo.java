@@ -14,4 +14,5 @@ public class QueryVo {
     private Integer courseId;
 
     private String title;
+
 }

@@ -178,7 +178,7 @@
 
             </ul>
             <p class="navbar-text navbar-right">
-                <span>${sessionScope.userName}</span> <i class="glyphicon glyphicon-log-in"
+                <span>${username}</span> <i class="glyphicon glyphicon-log-in"
                                                          aria-hidden="true"></i>&nbsp;&nbsp;<a
                     href="${pageContext.request.contextPath}/admin/exit"
                     class="navbar-link">退出</a>
@@ -324,7 +324,6 @@
 
 
     </form>
-    <br>
     <div align="center">
         <a href="list?page=1">首页</a>
         <a href="list?page=${pageInfo.prePage}">上一页</a>
@@ -335,6 +334,6 @@
         <a href="list?page=${pageInfo.pages }">尾页</a>
     </div>
 </div>
-
+<br><br><br><br><br>
 </body>
 </html>

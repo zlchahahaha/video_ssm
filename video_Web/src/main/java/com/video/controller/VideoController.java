@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -35,23 +36,92 @@ public class VideoController {
     private CourseService courseService;
 
     @RequestMapping("list")
-    public ModelAndView list(@RequestParam(required = false) QueryVo queryVo, @RequestParam(value = "page", defaultValue = "1") Integer pageNum){
+    public ModelAndView list(QueryVo queryVo, @RequestParam(value = "page", defaultValue = "1") Integer pageNum) {
+
         PageHelper.startPage(pageNum, 10);
         List<Video> allVideo = videoService.findAllVideo(queryVo);
+
         PageInfo<Video> pageInfo = new PageInfo<>(allVideo);
 
         ModelAndView modelAndView = new ModelAndView();
 
         List<Speaker> speakerList = speakerService.findAll();
-        modelAndView.addObject("speakerList",speakerList);
+        modelAndView.addObject("speakerList", speakerList);
         List<Course> courseList = courseService.findAll();
-        modelAndView.addObject("courseList",courseList);
+        modelAndView.addObject("courseList", courseList);
 
-        modelAndView.addObject("pageInfo",pageInfo);
+        modelAndView.addObject("pageInfo", pageInfo);
 
-        System.out.println(allVideo);
         modelAndView.setViewName("/behind/videoList.jsp");
 
         return modelAndView;
     }
+
+    @RequestMapping("edit")
+    public ModelAndView edit(Integer id) {
+        ModelAndView modelAndView = new ModelAndView();
+        Video byId = videoService.findById(id);
+        System.out.println(byId);
+        modelAndView.addObject("video", byId);
+        List<Speaker> speakerList = speakerService.findAll();
+        modelAndView.addObject("speakerList", speakerList);
+        List<Course> courseList = courseService.findAll();
+        modelAndView.addObject("courseList", courseList);
+
+        modelAndView.setViewName("/behind/addVideo.jsp");
+
+        return modelAndView;
+    }
+
+    @RequestMapping("saveOrUpdate")
+    public String saveOrUpdate(Video video) {
+        if (video.getId() == null) {
+            videoService.addVideo(video);
+            System.out.println("添加的video为:" + video);
+        } else {
+            videoService.updateVideo(video);
+            System.out.println("修改的video为:" + video);
+        }
+
+        return "redirect:/video/list";
+    }
+
+    @RequestMapping("videoDel")
+    @ResponseBody
+    public String videoDel(Integer id) {
+        videoService.videoDel(id);
+        System.out.println("删除的id为:" + id);
+
+        return "success";
+    }
+
+    @RequestMapping("addVideo")
+    public ModelAndView addVideo() {
+
+        Video video = new Video();
+        ModelAndView modelAndView = new ModelAndView();
+
+        modelAndView.addObject("video", video);
+        List<Speaker> speakerList = speakerService.findAll();
+        modelAndView.addObject("speakerList", speakerList);
+        List<Course> courseList = courseService.findAll();
+        modelAndView.addObject("courseList", courseList);
+
+        modelAndView.setViewName("/behind/addVideo.jsp");
+
+        return modelAndView;
+    }
+
+    @RequestMapping("delBatchVideos")
+    public String delBatchVideos(Integer[] ids) {
+        System.out.println(ids);
+
+        for (Integer id : ids) {
+            System.out.println("删除id：" + id);
+            videoService.videoDel(id);
+        }
+
+        return "redirect:/video/list";
+    }
+
 }
