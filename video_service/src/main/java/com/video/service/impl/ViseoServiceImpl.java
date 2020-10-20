@@ -25,7 +25,22 @@ public class ViseoServiceImpl implements VideoService {
     }
 
     @Override
-    public Video findVideoById(Integer videoId) {
-        return videoMapper.findVideoById(videoId);
+    public Video findById(Integer id) {
+        return videoMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public void updateVideo(Video video) {
+        videoMapper.updateByPrimaryKeyWithBLOBs(video);
+    }
+
+    @Override
+    public void videoDel(Integer id) {
+        videoMapper.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public void addVideo(Video video) {
+        videoMapper.insert(video);
     }
 }

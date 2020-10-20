@@ -60,7 +60,7 @@
 
 
     <resultMap id="ResultMapWithBLOBs" type="com.video.pojo.Video" extends="BaseResultMap">
-        <result column="detail" property="detail" jdbcType="LONGVARCHAR"/>
+        <result column="detail" property="detail" jdbcType="VARCHAR"/>
     </resultMap>
     <sql id="Example_Where_Clause">
         <where>
@@ -133,14 +133,14 @@
         FROM video,speaker,course
         <trim prefix="where">
             video.course_id = course.id and video.speaker_id = speaker.id
+            <if test="speakerId != null and speakerId != ''">
+                and speaker.id = #{speakerId}
+            </if>
+            <if test="courseId != null and courseId != ''">
+                and course.id = #{courseId}
+            </if>
             <if test="title != null and title != ''">
                 and title like concat('%',#{title},'%')
-                <if test="speaker.id != null and speaker.id != ''">
-                    and speaker.id = #{speakerId}
-                    <if test="course.id != null and course.id != ''">
-                        and course.id = #{courseId}
-                    </if>
-                </if>
             </if>
         </trim>
     </select>
@@ -314,7 +314,7 @@
         video_url = #{record.videoUrl,jdbcType=VARCHAR},
         image_url = #{record.imageUrl,jdbcType=VARCHAR},
         play_num = #{record.playNum,jdbcType=INTEGER},
-        detail = #{record.detail,jdbcType=LONGVARCHAR}
+        detail = #{record.detail,jdbcType=VARCHAR}
         <if test="_parameter != null">
             <include refid="Update_By_Example_Where_Clause"/>
         </if>
@@ -372,7 +372,7 @@
       video_url = #{videoUrl,jdbcType=VARCHAR},
       image_url = #{imageUrl,jdbcType=VARCHAR},
       play_num = #{playNum,jdbcType=INTEGER},
-      detail = #{detail,jdbcType=LONGVARCHAR}
+      detail = #{detail,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
     <update id="updateByPrimaryKey" parameterType="com.video.pojo.Video">

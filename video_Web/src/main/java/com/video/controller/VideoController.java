@@ -2,15 +2,18 @@ package com.video.controller;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.video.pojo.*;
+import com.video.pojo.Course;
+import com.video.pojo.QueryVo;
+import com.video.pojo.Speaker;
+import com.video.pojo.Video;
 import com.video.service.CourseService;
 import com.video.service.SpeakerService;
-import com.video.service.SubjectService;
 import com.video.service.VideoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -32,47 +35,93 @@ public class VideoController {
     @Autowired
     private CourseService courseService;
 
-    @Autowired
-    private SubjectService subjectService;
-
     @RequestMapping("list")
-    public ModelAndView list(QueryVo queryVo, @RequestParam(value = "page", defaultValue = "1") Integer pageNum){
+    public ModelAndView list(QueryVo queryVo, @RequestParam(value = "page", defaultValue = "1") Integer pageNum) {
+
         PageHelper.startPage(pageNum, 10);
         List<Video> allVideo = videoService.findAllVideo(queryVo);
+
         PageInfo<Video> pageInfo = new PageInfo<>(allVideo);
 
         ModelAndView modelAndView = new ModelAndView();
 
         List<Speaker> speakerList = speakerService.findAll();
-        modelAndView.addObject("speakerList",speakerList);
+        modelAndView.addObject("speakerList", speakerList);
         List<Course> courseList = courseService.findAll();
-        modelAndView.addObject("courseList",courseList);
+        modelAndView.addObject("courseList", courseList);
 
-        modelAndView.addObject("pageInfo",pageInfo);
+        modelAndView.addObject("pageInfo", pageInfo);
 
-        System.out.println(allVideo);
         modelAndView.setViewName("/behind/videoList.jsp");
 
         return modelAndView;
     }
 
-    @RequestMapping("showVideo")
-    public ModelAndView showVideo(Integer videoId, String subjectName) {
+    @RequestMapping("edit")
+    public ModelAndView edit(Integer id) {
         ModelAndView modelAndView = new ModelAndView();
+        Video byId = videoService.findById(id);
+        System.out.println(byId);
+        modelAndView.addObject("video", byId);
+        List<Speaker> speakerList = speakerService.findAll();
+        modelAndView.addObject("speakerList", speakerList);
+        List<Course> courseList = courseService.findAll();
+        modelAndView.addObject("courseList", courseList);
 
-        Video video = videoService.findVideoById(videoId);
-        Course course = video.getCourse();
-        Integer courseId = course.getId();
-        course = courseService.findById(courseId);
-
-        System.out.println(course);
-        System.out.println(video);
-
-        modelAndView.addObject("video", video);
-        modelAndView.addObject("course", course);
-        modelAndView.addObject("subjectName", subjectName);
-        modelAndView.setViewName("/before/section.jsp");
+        modelAndView.setViewName("/behind/addVideo.jsp");
 
         return modelAndView;
     }
+
+    @RequestMapping("saveOrUpdate")
+    public String saveOrUpdate(Video video) {
+        if (video.getId() == null) {
+            videoService.addVideo(video);
+            System.out.println("添加的video为:" + video);
+        } else {
+            videoService.updateVideo(video);
+            System.out.println("修改的video为:" + video);
+        }
+
+        return "redirect:/video/list";
+    }
+
+    @RequestMapping("videoDel")
+    @ResponseBody
+    public String videoDel(Integer id) {
+        videoService.videoDel(id);
+        System.out.println("删除的id为:" + id);
+
+        return "success";
+    }
+
+    @RequestMapping("addVideo")
+    public ModelAndView addVideo() {
+
+        Video video = new Video();
+        ModelAndView modelAndView = new ModelAndView();
+
+        modelAndView.addObject("video", video);
+        List<Speaker> speakerList = speakerService.findAll();
+        modelAndView.addObject("speakerList", speakerList);
+        List<Course> courseList = courseService.findAll();
+        modelAndView.addObject("courseList", courseList);
+
+        modelAndView.setViewName("/behind/addVideo.jsp");
+
+        return modelAndView;
+    }
+
+    @RequestMapping("delBatchVideos")
+    public String delBatchVideos(Integer[] ids) {
+        System.out.println(ids);
+
+        for (Integer id : ids) {
+            System.out.println("删除id：" + id);
+            videoService.videoDel(id);
+        }
+
+        return "redirect:/video/list";
+    }
+
 }

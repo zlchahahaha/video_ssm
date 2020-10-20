@@ -12,5 +12,11 @@ import java.util.List;
 public interface VideoService {
     List<Video> findAllVideo(QueryVo queryVo);
 
-    Video findVideoById(Integer videoId);
+    Video findById(Integer id);
+
+    void updateVideo(Video video);
+
+    void videoDel(Integer id);
+
+    void addVideo(Video video);
 }
