@@ -9,6 +9,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface VideoMapper {
+    Video findVideoById(Integer videoId);
+
     int countByExample(VideoExample example);
 
     int deleteByExample(VideoExample example);

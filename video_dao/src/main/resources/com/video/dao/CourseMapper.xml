@@ -9,6 +9,34 @@
   <resultMap id="ResultMapWithBLOBs" type="com.video.pojo.Course" extends="BaseResultMap" >
     <result column="course_desc" property="courseDesc" jdbcType="LONGVARCHAR" />
   </resultMap>
+
+
+  <resultMap id="courseMap" type="com.video.pojo.Course" >
+    <id column="couid" property="id"/>
+    <result column="course_title" property="courseTitle"/>
+    <result column="course_desc" property="courseDesc"/>
+    <collection property="videoList" ofType="com.video.pojo.Video">
+      <id column="vidid" property="id"/>
+      <result column="title" property="title"/>
+      <result column="detail" property="detail"/>
+      <result column="time" property="time"/>
+      <result column="video_url" property="videoUrl"/>
+      <result column="image_url" property="imageUrl"/>
+      <result column="play_num" property="playNum"/>
+    </collection>
+  </resultMap>
+
+
+  <select id="findById" resultMap="courseMap">
+        select course.id couid,course_title,course_desc,
+        video.id vidid,title,detail,time,video_url,image_url,play_num
+        from video,course
+        where course.id=video.course_id
+        and course_id=#{courseId}
+
+  </select>
+
+
   <sql id="Example_Where_Clause" >
     <where >
       <foreach collection="oredCriteria" item="criteria" separator="or" >

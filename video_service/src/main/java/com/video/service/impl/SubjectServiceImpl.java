@@ -2,6 +2,7 @@ package com.video.service.impl;
 
 import com.video.dao.SubjectMapper;
 import com.video.pojo.Subject;
+import com.video.pojo.SubjectExample;
 import com.video.service.SubjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,6 +26,15 @@ public class SubjectServiceImpl implements SubjectService {
     @Override
     public Subject findBySubjectId(Integer subjectId) {
         return subjectMapper.findBySubjectId(subjectId);
+    }
+
+    @Override
+    public Subject findBySubjectName(String subjectName) {
+        SubjectExample subjectExample = new SubjectExample();
+        subjectExample.createCriteria().andSubjectNameEqualTo(subjectName);
+
+
+        return subjectMapper.selectByExample(subjectExample).get(0);
     }
 
 

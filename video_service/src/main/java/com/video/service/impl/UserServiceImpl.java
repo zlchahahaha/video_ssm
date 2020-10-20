@@ -19,13 +19,24 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
     @Override
-    public boolean loginUser(User user) {
+    public User loginUser(User user) {
         UserExample userExample = new UserExample();
         UserExample.Criteria userExampleCriteria = userExample.createCriteria();
         userExampleCriteria.andEmailEqualTo(user.getEmail()).andPasswordEqualTo(user.getPassword());
 
         List<User> checkedUser = userMapper.selectByExample(userExample);
 
-        return !checkedUser.isEmpty();
+        return checkedUser.get(0);
+    }
+
+    @Override
+    public User findUserById(Integer account) {
+        return userMapper.selectByPrimaryKey(account);
+    }
+
+    @Override
+    public void updateUser(User user) {
+        userMapper.updateByPrimaryKeySelective(user);
+
     }
 }

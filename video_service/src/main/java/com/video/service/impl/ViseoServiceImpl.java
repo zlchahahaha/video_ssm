@@ -23,4 +23,9 @@ public class ViseoServiceImpl implements VideoService {
     public List<Video> findAllVideo(QueryVo queryVo) {
         return videoMapper.findAllVideo(queryVo);
     }
+
+    @Override
+    public Video findVideoById(Integer videoId) {
+        return videoMapper.findVideoById(videoId);
+    }
 }

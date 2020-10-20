@@ -9,5 +9,9 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public interface UserService {
-    public boolean loginUser(User user);
+    public User loginUser(User user);
+
+    public User findUserById(Integer account);
+
+    public void updateUser(User user);
 }

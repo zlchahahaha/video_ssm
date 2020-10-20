@@ -2,12 +2,10 @@ package com.video.controller;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.video.pojo.Course;
-import com.video.pojo.QueryVo;
-import com.video.pojo.Speaker;
-import com.video.pojo.Video;
+import com.video.pojo.*;
 import com.video.service.CourseService;
 import com.video.service.SpeakerService;
+import com.video.service.SubjectService;
 import com.video.service.VideoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -34,6 +32,9 @@ public class VideoController {
     @Autowired
     private CourseService courseService;
 
+    @Autowired
+    private SubjectService subjectService;
+
     @RequestMapping("list")
     public ModelAndView list(QueryVo queryVo, @RequestParam(value = "page", defaultValue = "1") Integer pageNum){
         PageHelper.startPage(pageNum, 10);
@@ -51,6 +52,26 @@ public class VideoController {
 
         System.out.println(allVideo);
         modelAndView.setViewName("/behind/videoList.jsp");
+
+        return modelAndView;
+    }
+
+    @RequestMapping("showVideo")
+    public ModelAndView showVideo(Integer videoId, String subjectName) {
+        ModelAndView modelAndView = new ModelAndView();
+
+        Video video = videoService.findVideoById(videoId);
+        Course course = video.getCourse();
+        Integer courseId = course.getId();
+        course = courseService.findById(courseId);
+
+        System.out.println(course);
+        System.out.println(video);
+
+        modelAndView.addObject("video", video);
+        modelAndView.addObject("course", course);
+        modelAndView.addObject("subjectName", subjectName);
+        modelAndView.setViewName("/before/section.jsp");
 
         return modelAndView;
     }

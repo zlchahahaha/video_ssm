@@ -33,4 +33,9 @@ public class CourseServiceImpl implements CourseService {
 
         return courseList;
     }
+
+    @Override
+    public Course findById(Integer courseId) {
+        return courseMapper.findById(courseId);
+    }
 }

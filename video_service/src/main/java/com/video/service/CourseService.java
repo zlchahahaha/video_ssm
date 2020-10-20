@@ -11,5 +11,8 @@ import java.util.List;
  */
 public interface CourseService {
     List<Course> findAll();
+
     public List<Course> course(@PathVariable(name = "subject.id") Integer subjectId);
+
+    Course findById(Integer courseId);
 }

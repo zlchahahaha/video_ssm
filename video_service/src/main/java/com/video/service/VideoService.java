@@ -11,4 +11,6 @@ import java.util.List;
  */
 public interface VideoService {
     List<Video> findAllVideo(QueryVo queryVo);
+
+    Video findVideoById(Integer videoId);
 }
