@@ -39,4 +39,11 @@ public class UserServiceImpl implements UserService {
         userMapper.updateByPrimaryKeySelective(user);
 
     }
+
+    @Override
+    public User findUserByEmail(String email) {
+        User user = userMapper.findUserByEmail(email);
+
+        return user;
+    }
 }

@@ -2,6 +2,7 @@ package com.video.controller;
 
 import com.video.pojo.User;
 import com.video.service.UserService;
+import com.video.utils.MailUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +15,8 @@ import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
 import java.util.UUID;
+
+import static com.video.utils.MailUtils.getValidateCode;
 
 /**
  * @author: Administrator
@@ -103,9 +106,9 @@ public class UserController {
         String filename = image_file.getOriginalFilename();
         // 把文件的名称设置唯一值，uuid
         String uuid = UUID.randomUUID().toString().replace("-", "");
-        filename = uuid+"_"+filename;
+        filename = uuid + "_" + filename;
         // 完成文件上传
-        image_file.transferTo(new File(path,filename));
+        image_file.transferTo(new File(path, filename));
 
         sessionUser.setImgurl(filename);
         userService.updateUser(sessionUser);
@@ -150,5 +153,53 @@ public class UserController {
 
         return "/before/my_profile.jsp";
 
+    }
+
+    @RequestMapping("forgetPassword")
+    public String forgetPassword() {
+        return "/before/forget_password.jsp";
+    }
+
+    @RequestMapping("sendEmail")
+    @ResponseBody
+    public String sendEmail(String email, HttpServletRequest request) {
+        User user = userService.findUserByEmail(email);
+        String rst;
+
+        if (user == null) {
+            rst = "hasNoUser";
+        } else {
+            rst = "success";
+            String checkCode = getValidateCode(6);
+            request.getSession(false).setAttribute("checkCode", checkCode);
+            System.out.println("验证码：" + checkCode);
+            MailUtils.sendMail(email, "你好，这是一封测试邮件，无需回复。", "测试邮件随机生成的验证码是：" + checkCode);
+        }
+
+        return rst;
+
+    }
+
+    @RequestMapping("validateEmailCode")
+    public String validateEmailCode(String email, String code, HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        String checkCode = (String) session.getAttribute("checkCode");
+        String rst;
+
+        if (checkCode.equals(code)) {
+            session.setAttribute("email", email);
+            rst = "/before/reset_password.jsp";
+        } else {
+            rst = "/before/forget_password.jsp";
+        }
+
+        return rst;
+
+    }
+
+    @RequestMapping("resetPassword")
+    public String resetPassword(String password) {
+
+        return "";
     }
 }

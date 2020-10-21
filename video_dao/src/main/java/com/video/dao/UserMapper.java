@@ -8,6 +8,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserMapper {
+    public User findUserByEmail(String email);
+
     int countByExample(UserExample example);
 
     int deleteByExample(UserExample example);

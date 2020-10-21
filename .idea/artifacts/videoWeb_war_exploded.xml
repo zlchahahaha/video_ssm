@@ -14,6 +14,8 @@
           <element id="module-output" name="videoWeb" />
         </element>
         <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.sun.mail:javax.mail:1.6.2" />
+          <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
           <element id="archive" name="video_service-1.0-SNAPSHOT.jar">
             <element id="module-output" name="video_service" />
           </element>
@@ -45,6 +47,9 @@
           <element id="library" level="project" name="Maven: jstl:jstl:1.2" />
           <element id="library" level="project" name="Maven: com.github.pagehelper:pagehelper:5.1.11" />
           <element id="library" level="project" name="Maven: com.github.jsqlparser:jsqlparser:2.0" />
+          <element id="archive" name="video_utils-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="video_utils" />
+          </element>
         </element>
       </element>
       <element id="directory" name="META-INF">
