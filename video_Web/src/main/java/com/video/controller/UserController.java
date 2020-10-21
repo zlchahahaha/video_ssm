@@ -2,10 +2,14 @@ package com.video.controller;
 
 import com.video.pojo.User;
 import com.video.service.UserService;
+import com.video.utils.ImageCut;
 import com.video.utils.MailUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
@@ -252,5 +256,40 @@ public class UserController {
         }
 
         return rst;
+    }
+    @RequestMapping(value = "/cutImage", method = RequestMethod.POST, consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+/** "裁剪图片"
+ 　*  bigImage:需裁剪图片路径
+ *  x : 坐标X轴起点
+ *  y : 坐标Y轴起点
+ *  w : 截取宽度
+ *  h : 截取高度
+ */
+    public String cutImage(@RequestParam("bigImage") String bigImage, @RequestParam("x") String x,
+                           @RequestParam("y") String y, @RequestParam("w") String w, @RequestParam("h") String h,
+                           HttpServletRequest request) {
+        MultipartFile file = null;
+        try {
+            int xInt = Integer.valueOf(x);
+            int yInt = Integer.valueOf(y);
+            int wInt = Integer.valueOf(w);
+            int hInt = Integer.valueOf(h);
+
+            // 文件正式路径
+            String imagePath = bigImage;
+            // 切割图片
+            ImageCut imageCut = new ImageCut();
+            file = (MultipartFile) imageCut.cutImage(imagePath, xInt, yInt, wInt, hInt);
+            //把文件读取到字节数组里面
+            //byte[] bytes = FileUtils.readFileToByteArray(file);
+            // 上传剪裁后的文件
+            return upLoadImage(file,request);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            // FileUtils.deleteQuietly(file);
+        }
+        return bigImage;
     }
 }
