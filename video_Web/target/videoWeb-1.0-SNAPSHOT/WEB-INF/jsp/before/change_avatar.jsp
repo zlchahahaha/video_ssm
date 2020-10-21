@@ -102,9 +102,7 @@
                                 <p>第二步：请选择需要截图的部位,然后按上传</p>
                                 <img id="preview">
                                 <br>
-
-
-                                <input type="submit" value="上传"/>
+                                <input type="submit" onclick="return cutImage(imgurl)" value="上传"/>
                             </div>
                         </form>
                     </div>
@@ -127,5 +125,40 @@
 <script src="${pageContext.request.contextPath}/js/jquery-1.8.3.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/jquery.Jcrop.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/Jcrop_upload.js"></script>
-
+<script>
+    function cutImage(name) { //name为裁剪图片名称
+        var image = new Image();
+        image.src = imgUrl + "E:\\soft\\tomcat\\apache-tomcat-9.0.33\\webapps\\video" + name; //图片全路径
+        image.onload = function() {
+            var s;
+            if (image.width <= image.height) {
+                s = image.width;
+            } else {
+                s = image.height;
+            }
+            var param = {};
+            param.x = 0;
+            param.y = 0;
+            param.w = s;
+            param.h = s;
+            param.bigImage = image.src;
+            $.ajax({
+                url : config.SERVER_URL + '/user/cutImage',
+                type : 'POST',
+                contentType : 'application/x-www-form-urlencoded',
+                data : param,
+                success : function(e, data) {
+                    if (e.status != 200) {
+                        alert( "上传失败");
+                        return;
+                    }
+                    alert( "上传成功");
+                },
+                error : function(e) {
+                    alert( "上传失败");
+                }
+            });
+        }
+    }
+</script>
 </html>

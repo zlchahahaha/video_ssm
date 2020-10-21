@@ -24,10 +24,7 @@
           </element>
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.2.8.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.2.8.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.2.8.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context:5.2.8.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-core:5.2.8.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.2.8.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.2.8.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:5.2.8.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:5.2.8.RELEASE" />
@@ -42,7 +39,6 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.11.2" />
           <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:4.0.1" />
           <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.4" />
-          <element id="library" level="project" name="Maven: commons-io:commons-io:2.2" />
           <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.18.12" />
           <element id="library" level="project" name="Maven: jstl:jstl:1.2" />
           <element id="library" level="project" name="Maven: com.github.pagehelper:pagehelper:5.1.11" />
@@ -50,6 +46,10 @@
           <element id="archive" name="video_utils-1.0-SNAPSHOT.jar">
             <element id="module-output" name="video_utils" />
           </element>
+          <element id="library" level="project" name="Maven: commons-io:commons-io:2.4" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.2.8.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:5.2.8.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.2.8.RELEASE" />
         </element>
       </element>
       <element id="directory" name="META-INF">
