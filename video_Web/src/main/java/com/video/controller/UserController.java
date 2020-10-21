@@ -31,7 +31,6 @@ public class UserController {
     @RequestMapping("loginUser")
     @ResponseBody
     public String loginUser(User user, HttpServletRequest request) {
-        System.out.println("111111");
         String rst;
         User loginUser = userService.loginUser(user);
 
@@ -50,11 +49,33 @@ public class UserController {
         return rst;
     }
 
+    @RequestMapping("loginOut")
+    @ResponseBody
+    public String loginOut(HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        session.invalidate();
+        session.setMaxInactiveInterval(0);
+
+        return "false";
+
+    }
+
+    @RequestMapping("loginOut2")
+    public String loginOut2(HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        session.invalidate();
+        session.setMaxInactiveInterval(0);
+
+        return "redirect:/index.jsp";
+
+    }
+
     @RequestMapping("showMyProfile")
     public ModelAndView showMyProfile(HttpServletRequest request) {
         ModelAndView modelAndView = new ModelAndView();
-        HttpSession session = request.getSession(false);
+        HttpSession session = request.getSession();
         User sessionUser = (User) session.getAttribute("user");
+
         int id = sessionUser.getId();
 
         User user = userService.findUserById(id);
@@ -198,8 +219,38 @@ public class UserController {
     }
 
     @RequestMapping("resetPassword")
-    public String resetPassword(String password) {
+    public String resetPassword(String password, HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        String email = (String) session.getAttribute("email");
 
-        return "";
+        User user = userService.findUserByEmail(email);
+        user.setPassword(password);
+
+        userService.updateUser(user);
+
+        return "redirect:/subject/selectAll";
+    }
+
+    @RequestMapping("insertUser")
+    @ResponseBody
+    public String insertUser(String yzm, User user, HttpServletRequest request) {
+        HttpSession session = request.getSession(true);
+        userService.insertUser(user);
+        session.setAttribute("user", userService.findUserByEmail(user.getEmail()));
+
+        return "success";
+    }
+
+    @RequestMapping("validateEmail")
+    @ResponseBody
+    public String validateEmail(String email) {
+        User checkedUser = userService.findUserByEmail(email);
+        String rst = "";
+
+        if (checkedUser == null) {
+            rst = "success";
+        }
+
+        return rst;
     }
 }

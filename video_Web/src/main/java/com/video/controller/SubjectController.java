@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -20,13 +21,11 @@ public class SubjectController {
     private SubjectService subjectService;
 
     @RequestMapping("selectAll")
-    public ModelAndView selectAll() {
-        ModelAndView modelAndView = new ModelAndView();
+    public String selectAll(HttpServletRequest request) {
         List<Subject> subjectList = subjectService.findAll();
 
-        modelAndView.addObject("subjectList", subjectList);
-        modelAndView.setViewName("/before/index.jsp");
+        request.getSession().setAttribute("subjectList", subjectList);
 
-        return modelAndView;
+        return "/before/index.jsp";
     }
 }

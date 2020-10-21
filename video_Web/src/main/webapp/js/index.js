@@ -166,7 +166,7 @@ function commitRegForm() {
     // alert(code);
     // alert(regIsCommitEmail+","+regIsCommitPsw);
     if (regIsCommitEmail && regIsCommitPsw && verifyCode.validate(code)) {
-        //用js提交表单
+        //         //用js提交表单
         // $("#regForm").commit();
 
         $.ajax({
