@@ -67,7 +67,7 @@
              draggable="false">
         <ul class="text_13 f_right">
             <li>
-                <a href="http://chengjian100.com/" target="_blank">首页</a>
+                <a href="${pageContext.request.contextPath}/subject/selectAll" target="_blank">首页</a>
             </li>
             <li class="nav_down">
                 高端课程<img src="${pageContext.request.contextPath}/img/nav_down.png" alt="" draggable="false">

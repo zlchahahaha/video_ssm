@@ -17,4 +17,6 @@ public interface UserService {
 
     public User findUserByEmail(String email);
 
+    public void insertUser(User user);
+
 }
