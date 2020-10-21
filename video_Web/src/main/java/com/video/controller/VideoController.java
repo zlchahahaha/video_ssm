@@ -36,13 +36,14 @@ public class VideoController {
     private CourseService courseService;
 
     @RequestMapping("list")
-    public ModelAndView list(QueryVo queryVo, @RequestParam(value = "page", defaultValue = "1") Integer pageNum) {
-
+    public ModelAndView list(QueryVo queryVo, @RequestParam(required = false,defaultValue = "1") Integer pageNum) {
+        System.out.println(queryVo);
+        System.out.println(pageNum);
         PageHelper.startPage(pageNum, 10);
         List<Video> allVideo = videoService.findAllVideo(queryVo);
 
         PageInfo<Video> pageInfo = new PageInfo<>(allVideo);
-
+        System.out.println(pageInfo);
         ModelAndView modelAndView = new ModelAndView();
 
         List<Speaker> speakerList = speakerService.findAll();
@@ -50,8 +51,9 @@ public class VideoController {
         List<Course> courseList = courseService.findAll();
         modelAndView.addObject("courseList", courseList);
 
+        modelAndView.addObject("queryVo",queryVo);
         modelAndView.addObject("pageInfo", pageInfo);
-
+        System.out.println(queryVo.getSpeakerId());
         modelAndView.setViewName("/behind/videoList.jsp");
 
         return modelAndView;

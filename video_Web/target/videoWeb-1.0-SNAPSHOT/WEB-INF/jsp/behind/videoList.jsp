@@ -155,6 +155,7 @@
             }
 
         }
+
     </script>
 </head>
 <body>
@@ -214,7 +215,7 @@
         <div class="col-md-4"></div>
         <div class="col-md-6">
             <!-- 查询相关组件 -->
-            <form class="navbar-form navbar-right" action="${pageContext.request.contextPath}/video/list" method="post">
+            <form id="queryForm" class="navbar-form navbar-right" action="${pageContext.request.contextPath}/video/list" method="post">
                 <input type="text" name="title" class="form-control" placeholder="标题" value="${queryVo.title}">
                 <div class="btn-group">
                     <button type="button" id="speakerName"
@@ -265,6 +266,7 @@
                         </c:forEach>
                     </ul>
                     <input type="hidden" name="courseId" id="courseId" value="${queryVo.courseId}"/>
+                    <input type="hidden" name="pageNum" id="pageNum" value="${pageInfo.pageNum}"/>
                 </div>
                 <button type="submit" class="btn btn-info dropdown-toggle">查询</button>
             </form>
@@ -321,19 +323,22 @@
 
             </tbody>
         </table>
-
-
     </form>
-    <div align="center">
-        <a href="list?page=1">首页</a>
-        <a href="list?page=${pageInfo.prePage}">上一页</a>
-        &nbsp;
-        ${pageInfo.pageNum }/${pageInfo.pages} </span>页
-        &nbsp;
-        <a href="list?page=${pageInfo.nextPage }">下一页</a>
-        <a href="list?page=${pageInfo.pages }">尾页</a>
-    </div>
+
+    <tr>
+        <a href="javascript:void(0)" onclick="queryPage(1)">首页</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="javascript:void(0)" onclick="queryPage(${pageInfo.prePage})">上一页</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="javascript:void(0)">${pageInfo.pageNum}/${pageInfo.pages} </span>页</a>
+        <a href="javascript:void(0)" onclick="queryPage(${pageInfo.nextPage})">下一页</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="javascript:void(0)" onclick="queryPage(${pageInfo.pages})">尾页</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </tr>
 </div>
 <br><br><br><br><br>
 </body>
+<script>
+    function queryPage(pageNum) {
+        $("#pageNum").val(pageNum);
+        $("#queryForm").submit();
+    }
+</script>
 </html>
