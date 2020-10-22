@@ -8320,7 +8320,7 @@ function genDefaultModel (
       type === 'file') {
     warn$3(
       "<" + (el.tag) + " v-model=\"" + value + "\" type=\"file\">:\n" +
-      "File inputs are read only. Use a v-on:change listener instead."
+      "File inputs are read only. Use a v-on:change interceptor instead."
     );
   }
 

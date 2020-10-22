@@ -5,10 +5,8 @@ import com.video.service.UserService;
 import com.video.utils.ImageCut;
 import com.video.utils.MailUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
@@ -116,25 +114,28 @@ public class UserController {
         return "/before/change_avatar.jsp";
     }
 
-    @RequestMapping("upLoadImage")
-    public String upLoadImage(MultipartFile image_file, HttpServletRequest request) throws IOException {
-        HttpSession session = request.getSession(false);
-        User sessionUser = (User) session.getAttribute("user");
+    @RequestMapping("/upLoadImage")
+    public String upLoadImage(MultipartFile image_file, String x1, String x2, String y1, String y2, HttpServletRequest request) throws IOException {
         // 使用fileupload组件完成文件上传
         // 上传的位置
-        String path = "E:\\soft\\tomcat\\apache-tomcat-9.0.33\\webapps\\video";
+        String path = "E:\\soft\\tomcat\\apache-tomcat-9.0.33\\webapps\\video\\";
         // 判断，该路径是否存在
         File file = new File(path);
 
-        // 说明上传文件项
-        // 获取上传文件的名称
         String filename = image_file.getOriginalFilename();
-        // 把文件的名称设置唯一值，uuid
         String uuid = UUID.randomUUID().toString().replace("-", "");
         filename = uuid + "_" + filename;
-        // 完成文件上传
+
         image_file.transferTo(new File(path, filename));
 
+        int x1Int = (int) Double.parseDouble(x1);
+        int x2Int = (int) Double.parseDouble(x2);
+        int y1Int = (int) Double.parseDouble(y1);
+        int y2Int = (int) Double.parseDouble(y2);
+        new ImageCut().cutImage(path + "\\" + filename, x1Int, y1Int, x2Int - x1Int, y2Int - y1Int);
+
+        HttpSession session = request.getSession(false);
+        User sessionUser = (User) session.getAttribute("user");
         sessionUser.setImgurl(filename);
         userService.updateUser(sessionUser);
 
@@ -257,39 +258,5 @@ public class UserController {
 
         return rst;
     }
-    @RequestMapping(value = "/cutImage", method = RequestMethod.POST, consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
-/** "裁剪图片"
- 　*  bigImage:需裁剪图片路径
- *  x : 坐标X轴起点
- *  y : 坐标Y轴起点
- *  w : 截取宽度
- *  h : 截取高度
- */
-    public String cutImage(@RequestParam("bigImage") String bigImage, @RequestParam("x") String x,
-                           @RequestParam("y") String y, @RequestParam("w") String w, @RequestParam("h") String h,
-                           HttpServletRequest request) {
-        MultipartFile file = null;
-        try {
-            int xInt = Integer.valueOf(x);
-            int yInt = Integer.valueOf(y);
-            int wInt = Integer.valueOf(w);
-            int hInt = Integer.valueOf(h);
 
-            // 文件正式路径
-            String imagePath = bigImage;
-            // 切割图片
-            ImageCut imageCut = new ImageCut();
-            file = (MultipartFile) imageCut.cutImage(imagePath, xInt, yInt, wInt, hInt);
-            //把文件读取到字节数组里面
-            //byte[] bytes = FileUtils.readFileToByteArray(file);
-            // 上传剪裁后的文件
-            return upLoadImage(file,request);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            // FileUtils.deleteQuietly(file);
-        }
-        return bigImage;
-    }
 }
