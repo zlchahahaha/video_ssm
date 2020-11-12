@@ -16,14 +16,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.UUID;
 
 import static com.video.utils.MailUtils.getValidateCode;
 
-/**
- * @author: Administrator
- * @date: 2020/10/19 19:19
- */
 @Controller
 @RequestMapping("user")
 public class UserController {
@@ -106,6 +103,8 @@ public class UserController {
 
         session.setAttribute("user", sessionUser);
 
+        new HashMap<>();
+
         return "/before/my_profile.jsp";
     }
 
@@ -115,7 +114,7 @@ public class UserController {
     }
 
     @RequestMapping("/upLoadImage")
-    public String upLoadImage(MultipartFile image_file, String x1, String x2, String y1, String y2, HttpServletRequest request) throws IOException {
+    public String upLoadImage(MultipartFile image_file,String x1, String x2, String y1, String y2, HttpServletRequest request) throws IOException {
         // 使用fileupload组件完成文件上传
         // 上传的位置
         String path = "E:\\soft\\tomcat\\apache-tomcat-9.0.33\\webapps\\video\\";
@@ -242,6 +241,7 @@ public class UserController {
         HttpSession session = request.getSession(true);
         userService.insertUser(user);
         session.setAttribute("user", userService.findUserByEmail(user.getEmail()));
+        session.setAttribute("userAccount", userService.findUserByEmail(user.getEmail()).getEmail());
 
         return "success";
     }

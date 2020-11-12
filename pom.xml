@@ -13,7 +13,6 @@
         <module>video_service</module>
         <module>video_dao</module>
         <module>video_utils</module>
-        <module>video_utils</module>
     </modules>
 
 

@@ -11,10 +11,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
-/**
- * @author: Administrator
- * @date: 2020/10/19 19:59
- */
 @Controller
 @RequestMapping("course")
 public class CourseController {

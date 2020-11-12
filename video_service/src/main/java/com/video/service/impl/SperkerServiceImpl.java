@@ -8,10 +8,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-/**
- * @author lyuf
- * @date 2020/10/19 21:46
- */
 @Service
 public class SperkerServiceImpl implements SpeakerService {
     @Autowired

@@ -18,10 +18,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
-/**
- * @author lyuf
- * @date 2020/10/19 19:51
- */
 @RequestMapping("video")
 @Controller
 public class VideoController {

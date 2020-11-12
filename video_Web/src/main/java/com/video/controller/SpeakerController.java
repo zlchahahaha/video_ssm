@@ -14,11 +14,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
-/**
- * @author lyuf
- * @date 2020/10/20 10:08
- */
-
 @Controller
 @RequestMapping("speaker")
 public class SpeakerController {

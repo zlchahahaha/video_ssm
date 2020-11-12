@@ -10,10 +10,6 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
-/**
- * @author: Administrator
- * @date: 2020/10/19 16:00
- */
 @Controller
 @RequestMapping("subject")
 public class SubjectController {

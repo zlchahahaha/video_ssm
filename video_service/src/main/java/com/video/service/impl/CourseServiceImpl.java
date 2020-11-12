@@ -10,10 +10,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-/**
- * @author lyuf
- * @date 2020/10/19 21:48
- */
 @Service
 public class CourseServiceImpl implements CourseService {
     @Autowired

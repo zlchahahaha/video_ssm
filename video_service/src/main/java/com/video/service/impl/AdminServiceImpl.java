@@ -9,10 +9,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-/**
- * @author lyuf
- * @date 2020/10/19 15:25
- */
 @Service
 public class AdminServiceImpl implements AdminService {
 

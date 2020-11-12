@@ -9,10 +9,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-/**
- * @author: Administrator
- * @date: 2020/10/19 16:07
- */
 @Service
 public class SubjectServiceImpl implements SubjectService {
     @Autowired

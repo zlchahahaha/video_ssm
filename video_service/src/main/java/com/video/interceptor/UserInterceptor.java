@@ -6,11 +6,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-
-/**
- * @author: Administrator
- * @date: 2020/10/19 16:27
- */
 public class UserInterceptor implements HandlerInterceptor {
 
     @Override
