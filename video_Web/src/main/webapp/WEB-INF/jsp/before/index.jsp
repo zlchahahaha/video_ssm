@@ -60,7 +60,7 @@
 </header>
 <nav class="w100">
     <div class="container">
-        <img src="${pageContext.request.contextPath}/img/logo.png" alt="Y先生教育的logo"
+        <img src="${pageContext.request.contextPath}/img/logo.png" alt="logo"
              onclick="location.href='${pageContext.request.contextPath}'" draggable="false">
         <ul class="text_13 f_right">
             <li>
@@ -113,7 +113,6 @@
                         </a>
                     </td>
                     <td>
-                        <!--上线时修改id-->
                         <a href="${pageContext.request.contextPath}/course/course/6">
                             <img src="${pageContext.request.contextPath}/img/ui.jpg" alt="" class="image scale"
                                  draggable="false">
@@ -124,7 +123,7 @@
                         </a>
                     </td>
                     <td rowspan="2" class="one_three">
-                        <a href="#" class="opacity5">
+                        <a href="${pageContext.request.contextPath}/course/course/2" class="image scale">
                             <img src="${pageContext.request.contextPath}/img/java.jpg" alt="" class="image"
                                  draggable="false">
                             <div class="headline">
@@ -136,7 +135,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <a href="#" class="opacity5">
+                        <a href="${pageContext.request.contextPath}/course/course/5" class="image scale">
                             <img src="${pageContext.request.contextPath}/img/bigdata.jpg" alt="" class="image"
                                  draggable="false">
                             <div class="headline">
@@ -189,7 +188,7 @@
 <!--报名表单-->
 <div class="form_area">
     <div class="container">
-        <p class="title"><b>这个世界上可以选择的很多，可以改变命运的选择很少<br/>你现在准备好向梦想出发了吗？</b></p>
+        <p class="title"><b>这个世界上可以选择的很多，可以改变命运的选择很少<br/>加入我们一起寻找更优秀的课程</b></p>
         <form id="iform" action="#" method="post">
             <div class="form_line1"></div>
             <div class="form_line2"></div>
@@ -214,18 +213,18 @@
             <img src="${pageContext.request.contextPath}/img/footer_logo.png" alt="" draggable="false">
         </li>
         <li class="mt25">
-            <h3>校区地址</h3>
+            <h3>联系地址</h3>
             <ul>
-                <li>地址<br>河南省平顶山市龙翔大道河南Y先生学院</li>
+                <li>地址<br>河南省开封市龙亭区河南大学金明校区</li>
 
             </ul>
         </li>
         <li class="mt25">
             <h3>联系我们</h3>
             <ul id="foo_icon">
-                <li>河南省平顶山市龙翔大道河南Y先生学院</li>
-                <li>e-mail:zy@chengjian100.com</li>
-                <li>电话:0395-208-9051 0375-208-9092</li>
+                <li>河南省开封市龙亭区河南大学金明校区</li>
+                <li>e-mail:675673364@qq.com</li>
+                <li>电话:13526331277</li>
                 <li class="erwei">
                     <br>
                     <div>
@@ -238,7 +237,7 @@
             </ul>
         </li>
     </ul>
-    <div class="record">Y先生教育 &copy; 豫ICP备13013243号;河南Y先生学院</div>
+    <div class="record">课程学习平台 &copy; 豫ICP备xxxxxxx号;</div>
 </footer>
 
 <!--登录注册弹出框-->

@@ -132,8 +132,11 @@
 
             <c:forEach items="${course.videoList}" var="video">
                 <div class="chapter" onclick="load(${video.id})">
-                    <p class="biaoti"><a
-                            href="showVideo?videoId=${video.id}&subjectName=${subjectName}">${video.title}</a></p>
+                    <p class="biaoti">
+                        <div onclick="pageRise()">
+                        <a href="showVideo?videoId=${video.id}&subjectName=${subjectName}">${video.title}</a>
+                        </div>
+                    </p>
                     <p class="lecturer">${video.detail}</p>
                     <p class="lecturer">讲师：${video.speaker.speakerName}</p>
                     <div class="v-info">
@@ -143,6 +146,7 @@
                                                     alt="">${video.time}</span>
                     </div>
                 </div>
+
             </c:forEach>
 
 
@@ -202,6 +206,7 @@
         <%--});--%>
 
     });
+
 </script>
 </body>
 

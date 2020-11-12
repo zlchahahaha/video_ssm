@@ -105,7 +105,7 @@
                     </c:if>
 
                 </a>
-                <a href="${pageContext.request.contextPath}/user/loginOut2" id="lay_out">退1出</a>
+                <a href="${pageContext.request.contextPath}/user/loginOut2" id="lay_out">退出</a>
             </div>
         </div>
     </menu>

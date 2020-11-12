@@ -131,15 +131,23 @@ public class VideoController {
         Integer courseId = course.getId();
         course = courseService.findById(courseId);
 
-        System.out.println(course);
-        System.out.println(video);
-
         modelAndView.addObject("video", video);
         modelAndView.addObject("course", course);
         modelAndView.addObject("subjectName", subjectName);
         modelAndView.setViewName("/before/section.jsp");
 
         return modelAndView;
+    }
+
+    @RequestMapping("updatePlayNum")
+    public Video updatePlayNum(Integer id, Integer playNum) {
+        Video video = videoService.findById(id);
+
+        video.setPlayNum(playNum + 1);
+
+        videoService.updateVideo(video);
+
+        return video;
     }
 
 }
