@@ -11,7 +11,7 @@ header a {
 }
 
 header a:hover {
-    color: #e45d5f;
+    color: #b8b0fd;
 }
 
 header .container a {
@@ -37,7 +37,7 @@ header .container a img {
 }
 
 header .container .color_e4 {
-    color: #e45d5f;
+    color: #b8b0fd;
 }
 
 
@@ -124,7 +124,7 @@ nav #nav_down li a {
 }
 
 nav #nav_down li a:hover {
-    color: #e5585e;
+    color: #b8b0fd;
 }
 
 /*banner图*/
@@ -211,8 +211,8 @@ nav #nav_down li a:hover {
     margin-bottom: 60px;
 }
 .audition:hover{
-    background-color: #e5585e;
-    border: 1px solid #e5585e;
+    background-color: #b8b0fd;
+    border: 1px solid #b8b0fd;
     color: white;
 }
 
@@ -276,7 +276,7 @@ nav #nav_down li a:hover {
 }
 .form_area form>input:hover{
 	color: white;
-	background-color: #e5585e;
+	background-color: #b8b0fd;
 }
 
 .form_area form .form_line1{
@@ -569,7 +569,7 @@ footer .record{
 .kcjs .title{
     font-size: 26px;
     font-weight: bold;
-    border-left: 5px solid #e5585e;
+    border-left: 5px solid #b8b0fd;
     padding-left: 10px;
 }
 .kcjs .content{
@@ -585,7 +585,7 @@ footer .record{
 .catalog .title{
     font-size: 26px;
     font-weight: bold;
-    border-left: 5px solid #e5585e;
+    border-left: 5px solid #b8b0fd;
     padding-left: 10px;
     /*margin-bottom: 30px;*/
 }
@@ -603,7 +603,7 @@ footer .record{
 .catalog .chapter .biaoti:hover,
 .catalog .chapter .lecturer:hover,
 .catalog .chapter .v-info  span:hover{
-    color: #e5585e;
+    color: #b8b0fd;
 }
 .catalog .chapter .lecturer{
     font-size: 14px;
@@ -673,7 +673,7 @@ footer .record{
     font-size: 26px;
     font-weight: bold;
     color: #373737;
-    border-left: 5px solid #e5585e;
+    border-left: 5px solid #b8b0fd;
     padding-left: 10px;
     margin-top: 40px;
     margin-bottom: 10px;
@@ -792,7 +792,7 @@ footer .record{
 }
 .section-main>p:hover,
 .classify ul li .classify-v-info span:hover{
-    color: #e5585e;
+    color: #b8b0fd;
 }
 [v-cloak] {
   display: none;

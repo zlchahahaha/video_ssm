@@ -116,7 +116,7 @@ ul, li{
 }
 
 .c_e4 {
-    color: #e45d5f;
+    color: #b8b0fd;
 }
 
 .t_center {
@@ -124,7 +124,7 @@ ul, li{
 }
 
 .nav_choose {
-    background-color: #e55a5d;
+    background-color: #b8b0fd;
     color: #fff;
 }
 
@@ -147,7 +147,7 @@ ul, li{
 .hr4 hr {
     width: 30px;
     border: none;
-    border: 1px solid red;
+    border: 1px solid #b8b0fd;
     margin: 5px auto 20px;
 }
 

@@ -99,10 +99,10 @@ public class VideoController {
         Video video = new Video();
         ModelAndView modelAndView = new ModelAndView();
 
-        modelAndView.addObject("video", video);
         List<Speaker> speakerList = speakerService.findAll();
-        modelAndView.addObject("speakerList", speakerList);
         List<Course> courseList = courseService.findAll();
+        modelAndView.addObject("video", video);
+        modelAndView.addObject("speakerList", speakerList);
         modelAndView.addObject("courseList", courseList);
 
         modelAndView.setViewName("/behind/addVideo.jsp");
@@ -124,6 +124,10 @@ public class VideoController {
 
     @RequestMapping("showVideo")
     public ModelAndView showVideo(Integer videoId, String subjectName) {
+        Video findVideo = videoService.findById(videoId);
+        findVideo.setPlayNum(findVideo.getPlayNum() + 1);
+        videoService.updateVideo(findVideo);
+
         ModelAndView modelAndView = new ModelAndView();
 
         Video video = videoService.findVideoById(videoId);
@@ -137,17 +141,6 @@ public class VideoController {
         modelAndView.setViewName("/before/section.jsp");
 
         return modelAndView;
-    }
-
-    @RequestMapping("updatePlayNum")
-    public Video updatePlayNum(Integer id, Integer playNum) {
-        Video video = videoService.findById(id);
-
-        video.setPlayNum(playNum + 1);
-
-        videoService.updateVideo(video);
-
-        return video;
     }
 
 }

@@ -30,8 +30,8 @@
             }
 
             //通过ajax更新播放次数
-            var params = {"id":"${video.id}", "playNum":"${video.playNum}"};
-            $.post("${pageContext.request.contextPath}/video/updatePlayNum", params);
+            <%--var params = {"id":"${video.id}", "playNum":"${video.playNum}"};--%>
+            <%--$.post("${pageContext.request.contextPath}/video/updatePlayNum", params);--%>
         });
     </script>
 </head>
@@ -63,19 +63,18 @@
 </header>
 <nav class="w100">
     <div class="container">
-        <img src="${pageContext.request.contextPath}/img/logo.png" alt="Y先生教育的logo" onclick="location.href='index.html'"
+        <img src="${pageContext.request.contextPath}/img/logo.png" alt="Y先生教育的logo" onclick="location.href='${pageContext.request.contextPath}/index.jsp'"
              draggable="false">
         <ul class="text_13 f_right">
             <li>
-                <a href="${pageContext.request.contextPath}/subject/selectAll" target="_blank">首页</a>
+                <a href="${pageContext.request.contextPath}/index.jsp">首页</a>
             </li>
             <li class="nav_down">
                 高端课程<img src="${pageContext.request.contextPath}/img/nav_down.png" alt="" draggable="false">
                 <ul id="nav_down" class="t_center">
                     <c:forEach items="${subjectList}" var="subject">
                         <li>
-                            <a target="_blank"
-                               href="${pageContext.request.contextPath}/course/course/${subject.id}">${subject.subjectName}</a>
+                            <a href="${pageContext.request.contextPath}/course/course/${subject.id}">${subject.subjectName}</a>
                         </li>
                     </c:forEach>
                 </ul>
@@ -140,8 +139,10 @@
                     <p class="lecturer">${video.detail}</p>
                     <p class="lecturer">讲师：${video.speaker.speakerName}</p>
                     <div class="v-info">
-                        <span class="count"><img src="${pageContext.request.contextPath}/img/count.png"
-                                                 alt="">${video.playNum}</span>
+                        <span class="count">
+                            <img src="${pageContext.request.contextPath}/img/count.png" alt="">
+                                    ${video.playNum}
+                        </span>
                         <span class="duration"><img src="${pageContext.request.contextPath}/img/player.png"
                                                     alt="">${video.time}</span>
                     </div>

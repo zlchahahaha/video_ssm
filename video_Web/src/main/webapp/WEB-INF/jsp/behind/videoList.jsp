@@ -327,11 +327,11 @@
 
     <div align="center">
         <tr>
-            <a href="javascript:void(0)" onclick="queryPage(1)" style="color: #2e8ded">首页</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="javascript:void(0)" onclick="queryPage(${pageInfo.prePage})" style="color: gold">上一页</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="javascript:void(0)" onclick="queryPage(1)" >首页</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="javascript:void(0)" onclick="queryPage(${pageInfo.prePage})" >上一页</a>&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="javascript:void(0)" style="color: greenyellow">${pageInfo.pageNum}/${pageInfo.pages} </span>页</a>
-            <a href="javascript:void(0)" onclick="queryPage(${pageInfo.nextPage})" style="color: red">下一页</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="javascript:void(0)" onclick="queryPage(${pageInfo.pages})" style="color: chocolate">尾页</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="javascript:void(0)" onclick="queryPage(${pageInfo.nextPage})" >下一页</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="javascript:void(0)" onclick="queryPage(${pageInfo.pages})" >尾页</a>&nbsp;&nbsp;&nbsp;&nbsp;
         </tr>
     </div>
 </div>
